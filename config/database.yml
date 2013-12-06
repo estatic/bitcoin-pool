@@ -1,19 +1,15 @@
 development:
-  adapter: mysql
-  encoding: utf8
-  reconnect: false
-  database: bitcoin-pool_prod
-  pool: 5
-  username: rails
-  password: rails
-  socket: /var/run/mysqld/mysqld.sock
+    adapter: sqlite3
+    database: db/development.sqlite3
+    pool: 5
+    timeout: 5000
 
 test:
-  adapter: mysql
-  encoding: utf8
-  reconnect: false
-  database: bitcoin-pool_test
-  pool: 5
-  username: rails
-  password: rails
-  socket: /var/run/mysqld/mysqld.sock
+    adapter: mysql
+    encoding: utf8
+    reconnect: false
+    database: bitcoin-pool_test
+    pool: 5
+    username: rails
+    password: rails
+    socket: /var/run/mysqld/mysqld.sock

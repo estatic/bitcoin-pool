@@ -55,7 +55,7 @@ en:
       submit: Save
       error:
         one: An error prevent your account from being saved
-        other: %{count} errors prevented your account from being saved
+        other: "%{count} errors prevented your account from being saved"
       if_password_reset: Use only if you want to change your password
       current_password_explanation: Needed to confirm your changes
       address_explanation: Necessary to receive payments
@@ -87,7 +87,7 @@ en:
     form:
       error:
         one: An error prevent this worker from being registered
-        other: %{count} errors prevented this worker from being registered
+        other: "%{count} errors prevented this worker from being registered"
       submit: Save worker
       suffix_explanation: The worker login will be [username].[suffix]
       password_explanation: This is used by your remote miner

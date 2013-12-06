@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(:version => 20110608195953) do
     t.boolean  "orphan"
   end
 
-  add_index "blocks", ["checksum"], :name => "checksum_idx", :unique => true
+  add_index "blocks", ["checksum"], :name => "index_blocks_on_checksum", :unique => true
 
   create_table "contributions", :force => true do |t|
     t.integer  "block_id"
@@ -62,13 +62,14 @@ ActiveRecord::Schema.define(:version => 20110608195953) do
   end
 
   create_table "shares", :force => true do |t|
-    t.text      "rem_host",        :null => false
-    t.text      "username",        :null => false
-    t.text      "our_result"
-    t.text      "upstream_result"
-    t.text      "reason"
-    t.text      "solution"
-    t.timestamp "created_at",      :null => false
+    t.text     "rem_host",        :null => false
+    t.text     "username",        :null => false
+    t.text     "our_result"
+    t.text     "upstream_result"
+    t.text     "reason"
+    t.text     "solution"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "statistics", :force => true do |t|

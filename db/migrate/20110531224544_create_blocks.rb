@@ -23,8 +23,8 @@ class CreateBlocks < ActiveRecord::Migration
       
       t.timestamps
     end
-
-    execute 'ALTER TABLE blocks ADD UNIQUE INDEX checksum_idx (checksum(255))'
+    add_index :blocks, :checksum, :unique => true
+    #execute 'ALTER TABLE blocks ADD UNIQUE INDEX checksum_idx (checksum(255))'
   end
 
   def self.down

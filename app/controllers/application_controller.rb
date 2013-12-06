@@ -17,6 +17,6 @@ class ApplicationController < ActionController::Base
 
     # Ensures that all timestamps comparisons compare UTC timestamps
     def ensure_utc_timestamps
-      ActiveRecord::Base.connection.execute("SET TIME_ZONE = '+00:00'")
+      #ActiveRecord::Base.connection.execute("SET TIME_ZONE = '+00:00'")
     end
 end
